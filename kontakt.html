@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | KLARSCHIFF Gebäudereinigung Hannover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-block">
+      <h1>KLARSCHIFF</h1>
+      <p>Gebäudereinigung Hannover und Region</p>
+    </div>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="#">Impressum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content-container">
+
+      <section class="page-hero">
+        <div class="page-hero-text">
+          <h2>Kontakt</h2>
+          <p>
+            Sie möchten ein Angebot anfordern, eine Objektbesichtigung vereinbaren oder haben
+            eine allgemeine Anfrage? Dann nehmen Sie gerne Kontakt mit uns auf.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-page">
+        <div class="contact-info-box">
+          <h3>Kontaktdaten</h3>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <h4>Adresse</h4>
+              <p>
+                Musterstraße 12<br>
+                30159 Hannover
+              </p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>Telefon</h4>
+              <p>0511 / 12345678</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>E-Mail</h4>
+              <p>info@klar-schiff.de</p>
+            </div>
+
+            <div class="contact-info-item">
+              <h4>Geschäftsführer</h4>
+              <p>Max Mustermann</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-box">
+          <h3>Nachricht senden</h3>
+
+          <form action="#" method="post" class="contact-form-large" id="contact-form">
+            <div class="form-row">
+              <div class="input-group">
+                <input type="text" name="name" placeholder="Ihr Name" required>
+              </div>
+
+              <div class="input-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Ihre E-Mail"
+                  required
+                  pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                >
+                <span class="error-message">Dies ist keine gültige E-Mail-Adresse.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <input type="text" name="telefon" placeholder="Ihre Telefonnummer" required>
+              </div>
+
+              <div class="input-group">
+                <input type="text" name="betreff" placeholder="Betreff" required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <textarea name="message" rows="10" placeholder="Ihre Nachricht ..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Nachricht absenden</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <h3>Standort</h3>
+        <p class="map-intro">
+          Hier kann später ein konkreter Kartenausschnitt des Unternehmensstandorts eingebunden werden.
+        </p>
+
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps?q=Hannover&output=embed"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps Standort Hannover">
+          </iframe>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer-Navigation" class="footer-nav">
+      <ul class="footer-left">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <ul class="footer-right">
+        <li><a href="#">Impressum</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- Erfolgs-Popup -->
+  <div class="success-popup" id="success-popup">
+    <div class="success-popup-box">
+      <p>
+        Vielen Dank, Ihre Nachricht wurde erfolgreich zugestellt!<br>
+        Wir melden uns bei Ihnen in Kürze.
+      </p>
+      <button type="button" class="btn popup-close-btn" id="popup-close-btn">Schließen</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
