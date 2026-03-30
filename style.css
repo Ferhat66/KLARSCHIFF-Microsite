@@ -155,35 +155,53 @@ ul {
 /* ===== Hero ===== */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 3rem;
   align-items: center;
-  padding: 1.5rem 1.5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+}
+
+.hero-text {
+  max-width: 820px;
 }
 
 .hero-text h2 {
   font-size: 3rem;
   line-height: 1.15;
   margin-bottom: 1.2rem;
-  max-width: 560px;
+  max-width: 1200px;
 }
 
 .hero-text p {
   font-size: 1.15rem;
-  max-width: 520px;
+  max-width: 1200px;
+  margin-bottom: 1.2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-bottom: 1.2rem;
 }
 
 .hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
   padding: 1rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   background: #cfcfcf;
   border: 1px solid #555;
+  white-space: nowrap;
 }
 
 .hero-note {
-  max-width: 430px;
+  max-width: 700px;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -191,14 +209,22 @@ ul {
 
 .hero-image {
   width: 100%;
-  max-width: 650px;
-  height: 320px;
+  max-width: 580px;
+  height: 360px;
   margin-left: auto;
+  background: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f1f1f1;
   overflow: hidden;
+}
+
+.hero-real-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
 /* ===== Leistungen ===== */
@@ -416,7 +442,7 @@ textarea {
 
 /* ===== Gemeinsamer Inhaltscontainer ===== */
 .content-container {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1.5rem 3rem;
 }
@@ -434,7 +460,7 @@ textarea {
 
 .page-hero-text p {
   font-size: 1.15rem;
-  max-width: 700px;
+  max-width: 1000px;
 }
 
 .about-content {
@@ -529,30 +555,30 @@ textarea {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1100px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 900px) {
   .hero,
   .content-section {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    gap: 2rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: 320px;
+    margin-left: 0;
+  }
+
   .hero-text h2,
   .page-hero-text h2 {
     font-size: 2.4rem;
   }
-
-  .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-}
 
   .main-nav ul {
     flex-wrap: wrap;
@@ -614,6 +640,7 @@ textarea {
 
 /* ===== Galerie-Seite ===== */
 .gallery-section {
+  max-width: 2000px;
   padding: 1rem 0 2.5rem;
 }
 
@@ -625,7 +652,7 @@ textarea {
 
 .gallery-intro,
 .gallery-cta p {
-  max-width: 850px;
+  max-width: 2000px;
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
   line-height: 1.7;
@@ -972,25 +999,7 @@ input[type="email"]:invalid:not(:placeholder-shown) + .error-message {
     grid-template-columns: 1fr;
   }
 }
-.hero-image {
-  width: 100%;
-  max-width: 580px;
-  height: 360px;
-  margin-left: auto;
-  background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
 
-.hero-real-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-}
 .service-icon {
   width: 110px;
   height: 110px;
@@ -1004,4 +1013,9 @@ input[type="email"]:invalid:not(:placeholder-shown) + .error-message {
   min-width: 48px;
   object-fit: contain;
   display: block;
+}
+
+.secondary-btn {
+  background: #ececec;
+  margin-left: 0;
 }

@@ -43,10 +43,11 @@
 
     <div class="hero-buttons">
       <a href="kontakt.html" class="btn hero-btn">Angebot anfordern</a>
+      <a href="ueber-uns.html" class="btn hero-btn secondary-btn">Firmenhistorie ansehen</a>
     </div>
 
     <p class="hero-note">
-      Lassen Sie sich ein kostenloses Angebot mit unverbindlicher Objektbesichtigung erstellen.
+      Lassen Sie sich ein kostenloses Angebot mit unverbindlicher Objektbesichtigung erstellen und entdecken Sie in unserer Firmenhistorie, wie sich KLARSCHIFF seit den Anfängen entwickelt hat – anschaulich aufbereitet in einer interaktiven Timeline.
     </p>
   </div>
 
@@ -64,8 +65,8 @@
           <img src="Bilder/icons/bueros-icon.png" alt="Icon für Büros" class="service-icon">
           <h3>Büros</h3>
           <ul>
-            <li>Text zur Leistung</li>
-            <li>Text zur Leistung</li>
+            <li>Regelmäßige Reinigung von Arbeitsplätzen, Böden und Gemeinschaftsflächen</li>
+            <li>Saubere Sanitär- und Küchenbereiche für einen gepflegten Arbeitsalltag</li>
           </ul>
         </article>
 
@@ -73,8 +74,8 @@
           <img src="Bilder/icons/praxen-icon.png" alt="Icon für Praxen" class="service-icon">
           <h3>Praxen</h3>
           <ul>
-            <li>Text zur Leistung</li>
-            <li>Text zur Leistung</li>
+            <li>Gründliche Reinigung sensibler Bereiche mit hohem Hygienestandard</li>
+            <li>Saubere Wartezimmer, Behandlungsräume und Sanitärbereiche</li>
           </ul>
         </article>
 
@@ -82,8 +83,8 @@
           <img src="Bilder/icons/treppenhaeuser-icon.png" alt="Icon für Treppenhäuser" class="service-icon">
           <h3>Treppenhäuser</h3>
           <ul>
-            <li>Text zur Leistung</li>
-            <li>Text zur Leistung</li>
+            <li>Zuverlässige Reinigung von Stufen, Geländern, Eingängen und Podesten</li>
+            <li>Gepflegter erster Eindruck für Bewohner, Besucher und Kunden</li>
           </ul>
         </article>
 
@@ -91,8 +92,8 @@
           <img src="Bilder/icons/sonstiges-icon.png" alt="Icon für Sonstiges" class="service-icon">
           <h3>Sonstiges</h3>
           <ul>
-            <li>Text zur Leistung</li>
-            <li>Text zur Leistung</li>
+            <li>Individuelle Reinigungslösungen für weitere gewerbliche Objekte</li>
+            <li>Flexible Einsätze nach Bedarf und passendem Reinigungsintervall</li>
           </ul>
         </article>
       </div>
@@ -113,7 +114,7 @@
             <img src="Bilder/icons/zuverlaessig-icon.png" alt="Icon für Zuverlässigkeit" class="why-icon">
             <div class="why-text">
               <h3>Zuverlässig</h3>
-              <p>Kurzer Text zur Zuverlässigkeit</p>
+              <p>Termintreue, klare Absprachen und konstante Reinigungsqualität stehen bei KLARSCHIFF im Mittelpunkt. So können sich Kundinnen und Kunden darauf verlassen, dass vereinbarte Leistungen regelmäßig und zuverlässig umgesetzt werden.</p>
             </div>
           </div>
 
@@ -121,7 +122,7 @@
             <img src="Bilder/icons/gruendlich-icon.png" alt="Icon für Gründlichkeit" class="why-icon">
             <div class="why-text">
               <h3>Gründlich</h3>
-              <p>Kurzer Text zur Gründlichkeit und Kundenzufriedenheit</p>
+              <p>KLARSCHIFF arbeitet mit einem hohen Anspruch an Sauberkeit und Sorgfalt. Dabei geht es nicht nur um sichtbare Ordnung, sondern um eine gründliche Reinigung, die zu einem dauerhaft gepflegten Gesamteindruck beiträgt.</p>
             </div>
           </div>
 
@@ -129,7 +130,7 @@
             <img src="Bilder/icons/region-icon.png" alt="Icon für Hannover und Region" class="why-icon">
             <div class="why-text">
               <h3>In Hannover und Region</h3>
-              <p>Kurzer Text zur regionalen Ausrichtung</p>
+              <p>Als regional ausgerichtetes Unternehmen ist KLARSCHIFF in Hannover und Umgebung schnell erreichbar und nah an seinen Kundinnen und Kunden. Kurze Wege, direkte Kommunikation und Ortskenntnis erleichtern dabei die Zusammenarbeit.</p>
             </div>
           </div>
         </section>
@@ -152,20 +153,20 @@
         </section>
 
         <section class="contact-preview">
-          <form action="#" method="post">
+          <form action="#" method="post" id="contact-form">
             <div class="form-row">
-              <input type="text" name="name" placeholder="Ihr Name">
-              <input type="email" name="email" placeholder="Ihre E-Mail">
+              <input type="text" name="name" placeholder="Ihr Name" required>
+              <input type="email" name="email" placeholder="Ihre E-Mail" required>
             </div>
 
-            <textarea name="message" rows="5" placeholder="Ihre Nachricht ..."></textarea>
+            <textarea name="message" rows="5" placeholder="Ihre Nachricht ..." required></textarea>
 
             <div class="contact-bottom">
               <button type="submit" class="btn">Nachricht absenden</button>
 
               <div class="contact-data">
                 <p>0511-12345678</p>
-                <p>info@mail.de</p>
+                <p>klarschiff.team@gmail.com</p>
               </div>
             </div>
           </form>
@@ -195,6 +196,17 @@
     </ul>
   </nav>
 </footer>
+<!-- Erfolgs-Popup -->
+<div class="success-popup" id="success-popup">
+  <div class="success-popup-box">
+    <p>
+      Vielen Dank, Ihre Nachricht wurde erfolgreich zugestellt!<br>
+      Wir melden uns bei Ihnen in Kürze.
+    </p>
+    <button type="button" class="btn popup-close-btn" id="popup-close-btn">Schließen</button>
+  </div>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
